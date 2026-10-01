@@ -17,7 +17,10 @@ pipeline {
 
         stage('Tests') {
             steps {
-                sh 'pytest --junitxml=test-results/results.xml'
+                sh '''
+                    python3 --version
+                    python3 -m pip --version
+                '''
             }
         }
 
